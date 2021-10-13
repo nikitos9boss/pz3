@@ -2,16 +2,47 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>3 Column Layout</title>
+    <title>slider</title>
     <link rel="stylesheet" href="assets/css/layout.css">
+    <link rel="stylesheet" href="assets/css/style.css" ><link>
+    <script src="assets/js/script.js"></script>
+    <script>
+        window.onload = function() {
+            // ви можете зробити скільки завгодно слайдів
+            let slides = [
+                {
+                    title: "summer",
+                    background: "assets/img/summer.jpg",
+                    link: "https://unsplash.com/images/nature/summer"
+                },
+                {
+                    title: "winter",
+                    background: "assets/img/winter.jpg",
+                    link: "https://unsplash.com/images/nature/winter"
+                },
+                {
+                    title: "autumn",
+                    background: "assets/img/autumn.jpg",
+                    link: "https://unsplash.com/wallpapers/nature/autumn"
+                }
+            ]
+            Slider.initSlider(slides);
+        };
+     </script>
 </head>
 <body>
     <header class="header"><img src="assets/img/phone.png" alt=""><p>slider</p></header>
 <div class="container">
     <main class="center column">
         <article>slider
-            <h1>Heading</h1>
-            <p></p>
+            <div class="slider" id="slider"></div>
+            <div class="btn-bar">
+                <button class="prevBtn slider-control-left"><i class="fa fa-angle-left"></i></button>
+                <button class="showBtn"><i class="fa fa-eye" style="font-size:2rem"></i></button>
+                <button class="hideBtn"><i class="fa fa-eye-slash" style="font-size:2rem"></i></button>
+                <button class="slideShow">auto</button>
+                <button class="nextBtn slider-control-right"><i class="fa fa-angle-right"></i></button> 
+            </div>
         </article>
     </main>
     <nav class="left column">
